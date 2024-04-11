@@ -4,8 +4,12 @@ const ResidentInquiriesList = ({ inquiries }) => {
   return (
     <div>
       <h4>Lista de Inquietudes y Quejas de Residentes</h4>
-      <ul>
-        {/* Aquí puedes mapear las inquietudes y quejas de los residentes y mostrarlas en una lista */}
+      No puedo pagar mi servicio del agua (Nombre del residente): Maria Cervantes<br></br>
+      No puedo realizar mi pago de luz (Nombre del residente): Pedro Sanchez
+    <ul>
+        {inquiries.map((inquiry, index) => (
+          <li key={index}>{inquiry.message}</li>
+        ))}
       </ul>
     </div>
   );

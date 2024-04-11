@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ResidentInquiriesForm from './ResidentInquiriesForm';
+import ResidentInquiriesList from './ResidentInquiriesList';
 
 const ResidentInquiries = () => {
+  const [inquiries, setInquiries] = useState([]);
+
+  const handleSubmit = (inquiry) => {
+    setInquiries([...inquiries, inquiry]);
+  };
+
   return (
     <div>
       <h3>Sección de Inquietudes y Quejas de Residentes</h3>
-      {/* Aquí puedes agregar la lógica y los componentes necesarios para gestionar las inquietudes y quejas */}
+      Servicios de agua<br></br> 
+      Servicios de luz
+      <ResidentInquiriesForm onSubmit={handleSubmit} />
+      <ResidentInquiriesList inquiries={inquiries} />
     </div>
   );
 };

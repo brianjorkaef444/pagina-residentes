@@ -2,6 +2,7 @@ import React from 'react';
 import PaymentGateway from './PaymentGateway';
 import PaymentUI from './PaymentUI';
 import CommunicationPlatform from './CommunicationPlatform';
+import ResidentInquiries from './ResidentInquiries';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <PaymentGateway />
       <PaymentUI />
       <CommunicationPlatform />
+      <ResidentInquiries />
     </div>
   );
 };
