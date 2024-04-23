@@ -1,6 +1,5 @@
 Aplicación Móvil - Residencial Los Robles
-imagenes/residencial.png
-
+![Texto alternativo](imágenes/residencial.png)
 Descripción
 El objetivo general del proyecto es desarrollar una aplicación web intuitiva y restringida para los habitantes de la colonia Residencial Los Robles. La aplicación integrará funciones para resolver problemáticas comunitarias y facilitar la interacción entre los residentes y la asociación de colonos.
 
