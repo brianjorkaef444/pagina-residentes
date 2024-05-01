@@ -1,6 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-import RegistroUsuario from './RegistroUsuario'; // Importa la página de registro de usuario
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import RegistroUsuario from './RegistroUsuario';
 import PaymentGateway from './PaymentGateway';
 import PaymentUI from './PaymentUI';
 import CommunicationPlatform from './CommunicationPlatform';
@@ -9,6 +9,7 @@ import CuotasYRecaudaciones from './CuotasYRecaudaciones';
 import ChatComunitario from './ChatComunitario';
 import NewResidentsInfo from './NewResidentsInfo';
 import VotingSystem from './VotingSystem';
+import AlertasEmergencia from './AlertasEmergencia'; // Importa tu nuevo componente de Alertas de Emergencia
 
 const App = () => {
   return (
@@ -43,26 +44,27 @@ const App = () => {
             <li>
               <Link to="/voting">Sistema de Votación</Link>
             </li>
+            <li>
+              <Link to="/alertas-emergencia">Alertas de Emergencia</Link> {/* Agrega el enlace para Alertas de Emergencia */}
+            </li>
           </ul>
         </nav>
 
-        <Switch>
-          <Route exact path="/" component={RegistroUsuario} /> {/* Página de registro como página principal */}
-          <Route path="/payment" component={PaymentGateway} />
-          <Route path="/payment-ui" component={PaymentUI} />
-          <Route path="/communication" component={CommunicationPlatform} />
-          <Route path="/inquiries" component={ResidentInquiries} />
-          <Route path="/cuotas" component={CuotasYRecaudaciones} />
-          <Route path="/chat" component={ChatComunitario} />
-          <Route path="/new-residents" component={NewResidentsInfo} />
-          <Route path="/voting" component={VotingSystem} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<RegistroUsuario />} />
+          <Route path="/payment" element={<PaymentGateway />} />
+          <Route path="/payment-ui" element={<PaymentUI />} />
+          <Route path="/communication" element={<CommunicationPlatform />} />
+          <Route path="/inquiries" element={<ResidentInquiries />} />
+          <Route path="/cuotas" element={<CuotasYRecaudaciones />} />
+          <Route path="/chat" element={<ChatComunitario />} />
+          <Route path="/new-residents" element={<NewResidentsInfo />} />
+          <Route path="/voting" element={<VotingSystem />} />
+          <Route path="/alertas-emergencia" element={<AlertasEmergencia />} /> {/* Agrega la ruta para Alertas de Emergencia */}
+        </Routes>
       </div>
     </Router>
   );
 };
 
 export default App;
-
-
-
