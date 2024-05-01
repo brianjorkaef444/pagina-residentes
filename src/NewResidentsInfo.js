@@ -4,7 +4,9 @@ const NewResidentsInfo = () => {
   return (
     <div style={styles.container}>
       <h2 style={styles.heading}>Información para Nuevos Residentes</h2>
-      <p style={styles.paragraph}>Esta es la información para los nuevos residentes...</p>
+      <p style={styles.paragraph}>Esta es la información para los nuevos residentes...</p><br></br>
+      <p> Como comunicarse con la mesa Directiva. Numero de contacto: 01 800 000 </p>
+      <p> Contamos con correo: Residenciallosrobles@gmail.com </p>
     </div>
   );
 }
